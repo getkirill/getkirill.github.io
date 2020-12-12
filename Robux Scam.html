@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #111111;
+            color: #eeeeee;
+            font-family: system-ui;
+            padding: 5px;
+        }
+
+        .taskf {
+            color: #00CC00;
+        }
+
+        p.copyright{
+            color:rgb(82, 82, 82);
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            padding-right: 50px;
+            font-size: 50px;
+            text-align: right;
+        }
+        #s {
+            padding: 5px;
+            border-radius: 5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color:rgb(82, 82, 82);
+        }
+    </style>
+</head>
+
+<body>
+    <h1><img src="https://cdn.emojidex.com/emoji/seal/Robux%28gold%29.png?1590495974"
+            style="width:25px;height:25px;margin-right:5px">ROBUX GENERATOR 2020</h1>
+    <p>Welcome to <img src="https://cdn.emojidex.com/emoji/seal/Robux%28gold%29.png?1590495974"
+            style="width:12.5px;height:12.5px;margin-right:5px">ROBUX GENERATOR 2020!</p>
+    <p id="m" class="taskf" style="display: none">Task failed successfully! We added ~ <img
+            src="https://cdn.emojidex.com/emoji/seal/Robux%28gold%29.png?1590495974"
+            style="width:12.5px;height:12.5px;margin-right:5px"></p>
+    <form id="s">
+        <label for="usr">Roblox Username:</label><br>
+        <input type="text" id="usr" name="usr" required><br>
+        <label for="pass">Roblox Password:</label><br>
+        <input type="password" id="pass" name="pass" required><br>
+        <label for="c">Robux Amount:</label><br>
+        <input type="number" value="1" min="1" id="c" name="c" required>
+        <input type="submit" value="Add!" href="" onclick="jojo()">
+    </form>
+    <h2>Why you might need Robux?</h2>
+    <p>Robux used within Roblox Ecosystem for variety of things. You can buy clothes, gamepasses, whole skins, currency
+        in game and much more! But there is one thing: you need pay real money for that!<img
+            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/loudly-crying-face_1f62d.png"
+            style="width:20px;height:20px;margin-left:5px"></p>
+    <p><b>But this site can generate robux for free!</b></p>
+    <p>Just type in your roblox username and password! And select desired amount of robux! As simple as play Roblox!<img
+        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/259/smiling-face-with-sunglasses_1f60e.png"
+        style="width:20px;height:20px;margin-left:5px"></p>
+    <p><b><i>Our visitors 100% gets their most-wanted Robux! Try this site!</i></b></p>
+    <p class="copyright">©Kraskaska 2020</p>
+    <script>
+        let form = document.getElementById("s");
+        function handleForm(event) { event.preventDefault(); }
+        form.addEventListener('submit', handleForm);
+        function jojo() {
+            let m = document.getElementById("m")
+            if (document.getElementById("usr").value == "") {
+                m.innerText = "Please enter username!"
+                m.style = "color: red"
+            } else if (document.getElementById("pass").value == "") {
+                m.innerText = "Please enter password!"
+                m.style = "color: red"
+            } else {
+                m.innerText = "Task failed successfully! We added " + document.getElementById("c").value
+                m.style = ""
+                m.appendChild(htmlToElement("<img src=\"https://cdn.emojidex.com/emoji/seal/Robux%28gold%29.png?1590495974\" style=\"width:12.5px;height:12.5px;margin-left:5px\">"))
+            }
+        }
+        function htmlToElement(html) {
+            var template = document.createElement('template');
+            html = html.trim(); // Never return a text node of whitespace as the result
+            template.innerHTML = html;
+            return template.content.firstChild;
+        }
+    </script>
+</body>
+
+</html>
